@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Drum kit</title>
+    
+</head>
+<body>
+
+    <div class="keys">
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+        </div>
+    
+        <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+        </div>
+   
+        <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+        </div>
+    
+        <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+        </div>
+    
+        <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+        </div>
+    
+        <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+        </div>
+    
+        <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+        </div>
+ 
+        <div data-key="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+        </div>
+    
+        <div data-key="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+        </div>
+    </div>
+
+    <audio data-key="65" src="sound/ride-cymbal-struck-once-sound-effect.mp3"></audio>
+    <audio data-key="83" src="sound/framedrum_23_76.mp3"></audio>
+    <audio data-key="68" src="sound/cymbal_hit_02.mp3"></audio>
+    <audio data-key="70" src="sound/76267041c33f24b.mp3"></audio>
+    <audio data-key="71" src="sound/377474-hitting_large_tamborine_with_drumstick-01.mp3"></audio>
+    <audio data-key="72" src="sound/345635_5450487-lq.mp3"></audio>
+    <audio data-key="74" src="sound/344329_2007100-lq.mp3"></audio>
+    <audio data-key="75" src="sound/345634_5450487-lq.mp3"></audio>
+    <audio data-key="76" src="sound/344330_2007100-lq.mp3"></audio>
+    
+    <script src="drumkit.js"></script>
+</body>
+</html>

@@ -8,8 +8,8 @@ const EmployeesList = ({ data, onDelete, onToggleProp}) => {
             key={id} 
             {...itemProps}
             onDelete = {() => onDelete(id)}
-            onToggleProp = {() => onToggleProp(id)}
-  });
+            onToggleProp = {(e) => onToggleProp(id, e.currentTarget.getAttribute('data-toggle'))} />
+});
 
   return <ul className="app-list list-group">{elements}</ul>;
 };

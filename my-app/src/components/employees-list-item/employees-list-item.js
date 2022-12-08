@@ -1,31 +1,24 @@
-import { Component } from "react";
 import "./employees-list-item.css";
 
-class EmployeesListItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      increase: false,
-    };
-  }
+const EmployeesListItem = (props) => {
 
-  onIncrease = () => {
-    this.setState(({increase}) => ({
-      increase: !increase
-    }))
-  }
-
-  render() {
-    const { name, salary} = this.props;
-    const {increase} = this.state;
+    const { name, salary, onDelete, onToggleProp, increase, rise} = props;
     let classNames = "list-group-item d-flex justify-content-between";
+
     if (increase) {
       classNames += " increase";
-    }
+    };
+
+    if (rise) {
+      classNames += " like";
+    };
+
 
     return (
       <li className={classNames}>
-        <span className="list-group-item-label">{name}</span>
+        <span className="list-group-item-label"
+        onClick={onToggleRise}
+        data-toggle="rise">{name}</span>
         <input
           type="text"
           className="list-group-item-input"
@@ -35,12 +28,13 @@ class EmployeesListItem extends Component {
           <button
             className="btn-cookie btn-sm"
             type="button"
-            onClick={this.onIncrease}
+            onClick={onToggleIncrease}
+            data-toggle="increase"
           >
             <i className="fas fa-cookie"></i>
           </button>
 
-          <button className="btn-trash btn-sm" type="button">
+          <button className="btn-trash btn-sm" type="button" onClick={onDelete}>
             <i className="fas fa-trash"></i>
           </button>
           <i className="fas fa-star"></i>
@@ -48,6 +42,5 @@ class EmployeesListItem extends Component {
       </li>
     );
   }
-}
 
 export default EmployeesListItem;

@@ -3,8 +3,8 @@ import './search-panel.css';
 const SearshPanel = () => {
     return (
         <input type="text"
-        className="form-control search-input"
-        placeholder="Найти сотрудника" />
+               className="form-control search-input"
+               placeholder="Найти сотрудника" />
 
     )
 }
